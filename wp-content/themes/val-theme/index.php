@@ -1,32 +1,30 @@
 <?php get_header(); ?>
  
 	<main id="content">
-	PUT LOOP JERE
-		<ul>
-			<li><a href><img src="img/maxwell2.jpg"></a></li>
-			<li><a href><img src="img/valerie.jpg"></a></li>
-		</ul>
- 		
- 		<p>This is testing content.</p>
+	<?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<!-- post -->
+	<h3><?php the_title(); ?></h3>
+	<?php the_content(); ?>
+
+	<?php endwhile; ?>
+	<!-- post navigation -->
+
+
+	<?php else: ?>
+	<!-- no posts found -->
+	<h2>Sorry, no posts found</h2>
+	:(
+
+
+	<?php endif; ?> 
  
 	</main><!-- end #content -->
 
 
  
-	<aside id="sidebar"> 
+<!-- 	<aside id="sidebar"> 
 
-	</aside><!-- end #sidebar -->
+	</aside> end #sidebar -->
  
-	<footer class="foot">
-		<ul>
-			<li><a href>VLE04240@gmail.com</a></li>
-			<li><a href>(802)338-2819</a></li>
-			<li><a href>Behance</a></li>
-		</ul>
-		&copy; 2014 by Author. All Rights Reserved. 
-	</footer>
-</body>
-</html>
 
-<ul
-
+<?php get_footer(); ?>
