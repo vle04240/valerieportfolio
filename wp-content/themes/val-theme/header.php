@@ -12,16 +12,26 @@
 	<header>
 		<h1 class="head-font"><a href="index.php"><?php bloginfo( 'title' ); ?></a></h1> 
 		<h2><?php bloginfo( 'description' ); ?></h2>
-		<nav>
-			<ul class="nav">
-				<li><a href="index.php">About</a></li>
-				<li><a href="resume.php">Resume</a></li>
-				<li><a href="archive.php">Portfolio</a></li>
-				<li><a href="contact.php">Contact</a></li>
-<!-- 				<li><a href="/gallery/">Photography</a></li>
-				<li><a href="/blog/">Video</a></li> -->
-			</ul>
-		</nav>	
+		
+
 	</header>
- 
+<!--  
+	<nav>
+			<ul class="nav">
+				<li class="circle"><a href="index.php">About</a></li>
+				<li class="circle"><a href="resume.php">Resume</a></li>
+				<li class="circle"><a href="archive.php">Portfolio</a></li>
+				<li class="circle"><a href="contact.php">Contact</a></li>
+				<li><a href="/gallery/">Photography</a></li>
+				<li><a href="/blog/">Video</a></li> 
+			</ul>
+	</nav> -->
+
+	<?php
+		wp_nav_menu( array(
+			'theme_location' => 'main_nav',
+			'container' => 'nav',
+			'menu_class' => 'nav',
+			'fallback_cb' => '',
 	
+		)); ?>

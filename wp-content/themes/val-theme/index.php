@@ -5,9 +5,12 @@
 	<!-- post -->
 	<h3><?php the_title(); ?></h3>
 	<?php the_content(); ?>
+	<?php the_post_thumbnail( 'thumbnail' ); ?>
 
 	<?php endwhile; ?>
 	<!-- post navigation -->
+
+
 
 
 	<?php else: ?>
