@@ -26,4 +26,16 @@ function sd_portfolio_setup(){
 			'not_found' 	=> 'No Piece Found',
 			),
 		) );
+
+	//add the Brand taxonomy to products
+	register_taxonomy( 'work_type', 'portfolio_piece', array(
+		'hierarchical' 		=> true,  //checklist interface, can have parent/child terms
+		'show_admin_column' => true,  //makes it appear in the edit products list
+		'labels' 			=> array(
+				'name' 			=> 'Work Types',
+				'singular_name' => 'Work Type',
+				'add_new_item'	=> 'Add New Work Type',
+				'search_items'	=> 'Search Work Types',
+			),
+	) );
 }

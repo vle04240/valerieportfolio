@@ -2,16 +2,10 @@
  
 	<main id="content">
 	<?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-
 	<!-- post -->
-	<div class="post">
-	<h3><?php the_title(); ?></h3>
-	<?php the_content(); ?>
-	<?php the_post_thumbnail( 'thumbnail' ); ?>
-	</div>
+	<h4><?php the_title(); ?></h4>
 
-
+	<h5><?php the_post_thumbnail( 'thumbnail' ); ?></h5>
 
 	<?php endwhile; ?>
 	<!-- post navigation -->
