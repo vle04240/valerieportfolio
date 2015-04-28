@@ -1,5 +1,5 @@
 <?php
-// Silence is golden.
+
 <!DOCTYPE html>
 <html>
 <head>
